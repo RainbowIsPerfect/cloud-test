@@ -1,0 +1,9 @@
+@use '../../../styles/' as *;
+
+.fieldset {
+  border: none;
+}
+
+.legend {
+  @include font($col: color(text), $fz: 14px, $lh: 20px);
+}

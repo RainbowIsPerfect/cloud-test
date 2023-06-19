@@ -1,0 +1,88 @@
+@function color($color-name) {
+  @return var(--color-#{$color-name});
+}
+
+@mixin flex($justify: false, $align: false, $direction: false) {
+  display: flex;
+  @if ($justify) {
+    justify-content: $justify;
+  }
+  @if ($align) {
+    align-items: $align;
+  }
+  @if ($direction) {
+    flex-direction: $direction;
+  }
+}
+
+@mixin size(
+  $w: false,
+  $h: false,
+  $minh: false,
+  $minw: false,
+  $maxh: false,
+  $maxw: false
+) {
+  @if ($w) {
+    width: $w;
+  }
+  @if ($h) {
+    height: $h;
+  }
+  @if ($maxw) {
+    max-width: $maxw;
+  }
+  @if ($maxh) {
+    max-height: $maxh;
+  }
+  @if ($minw) {
+    min-width: $minw;
+  }
+  @if ($minh) {
+    min-height: $minh;
+  }
+}
+
+@mixin font($fz: false, $lh: false, $fw: false, $col: false, $align: false) {
+  @if ($fz) {
+    font-size: $fz;
+  }
+  @if ($lh) {
+    line-height: $lh;
+  }
+  @if ($fw) {
+    font-weight: $fw;
+  }
+  @if ($col) {
+    color: $col;
+  }
+  @if ($align) {
+    text-align: $align;
+  }
+}
+
+@mixin border($w, $style, $col, $r: false) {
+  border: $w $style $col;
+  @if ($r) {
+    border-radius: $r;
+  }
+}
+
+@mixin position($pos, $t: false, $r: false, $b: false, $l: false, $z: false) {
+  position: $pos;
+  @if ($t) {
+    top: $t;
+  }
+  @if ($r) {
+    right: $r;
+  }
+  @if ($b) {
+    bottom: $b;
+  }
+  @if ($l) {
+    left: $l;
+  }
+  @if ($z) {
+    z-index: $z;
+  }
+}

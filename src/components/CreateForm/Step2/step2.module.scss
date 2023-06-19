@@ -1,0 +1,45 @@
+@use '../../../styles/' as *;
+
+.control {
+  margin-bottom: 0;
+}
+
+.input {
+  max-width: 300px;
+  width: 100%;
+}
+
+.wrapper {
+  @include flex($align: center);
+  margin-bottom: 8px;
+  height: 44px;
+}
+
+.button_delete {
+  width: 15px;
+  height: 15px;
+}
+
+.button_add {
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+  padding: 10px;
+  text-align: center;
+}
+
+.advantages {
+  margin-bottom: 24px;
+}
+
+.legend {
+  margin-bottom: 8px;
+}
+
+.checkboxes {
+  margin-bottom: 24px;
+}
+
+.error {
+  margin-top: 8px;
+}

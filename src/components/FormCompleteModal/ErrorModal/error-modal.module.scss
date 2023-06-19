@@ -1,0 +1,39 @@
+@use '../../../styles/' as *;
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: color(error-light);
+}
+
+.body {
+  padding: 26px 0;
+  margin-bottom: 24px;
+}
+
+.header {
+  @include flex($justify: space-between);
+  width: 100%;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.button_close {
+  @include size($w: 28px, $h: 28px);
+  background-color: #0000000a;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer {
+  @include flex($justify: end);
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+$colors: (
+  'placeholder': rgba(0, 0, 0, 0.48),
+  'main-bg': #fff,
+  'border': rgba(0, 0, 0, 0.16),
+  'text': #333333,
+  'disabled': rgba(0, 0, 0, 0.04),
+  'accent': #5558FA,
+  'accent-hover': #5456da,
+  'accent-active': #6366f8,
+  'accent-disabled': #5558fa5e,
+  'accent-hover-light': #aeaeec3a,
+  'accent-active-light': #aeaeec8a,
+  'success': #05AE71,
+  'success-light':#05AE7126,
+  'error': #E84E58,
+  'error-light': #E84E5826,
+  'avatar-bg': #D5E4F7,
+  'avatar-text': #212830,
+);

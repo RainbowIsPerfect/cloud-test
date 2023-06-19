@@ -1,0 +1,5 @@
+@use '../../../styles/' as *;
+
+.label {
+  @include font($col: color(text), $fz: 14px, $lh: 20px);
+}

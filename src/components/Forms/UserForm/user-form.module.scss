@@ -1,0 +1,15 @@
+@use '../../../styles/' as *;
+
+.form {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+}
+
+.last-input {
+  margin-bottom: 48px;
+}
+
+.input {
+  max-width: 400px;
+}

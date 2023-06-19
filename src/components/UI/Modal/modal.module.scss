@@ -1,0 +1,19 @@
+@use '../../../styles/' as *;
+
+.modal {
+  @include flex($align: center, $justify: center);
+  @include position(fixed, $t: 0, $l: 0, $r: 0, $b: 0, $z: 10);
+  overflow: auto;
+  background-color: #00000029;
+  &__container {
+    @include size($w: 460px, $h: 314px);
+    padding: 0 10px;
+    margin: auto;
+  }
+  &__content {
+    @include flex($align: center, $justify: center, $direction: column);
+    background-color: color(main-bg);
+    padding: 32px;
+    border-radius: 12px;
+  }
+}

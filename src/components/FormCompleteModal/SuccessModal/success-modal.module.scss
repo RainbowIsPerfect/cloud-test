@@ -1,0 +1,24 @@
+@use '../../../styles/' as *;
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: color(success-light);
+}
+
+.body {
+  padding: 26px 0;
+  margin-bottom: 24px;
+}
+
+.header {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+}

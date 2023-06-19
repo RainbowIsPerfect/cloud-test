@@ -1,0 +1,14 @@
+@use '../../../styles/' as *;
+
+.wrapper {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+}
+
+.counter {
+  @include position(absolute, $b: 10px, $r: 10px);
+  @include font($col: color(placeholder), $fz: 12px);
+}

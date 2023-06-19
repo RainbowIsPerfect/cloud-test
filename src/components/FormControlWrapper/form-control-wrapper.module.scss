@@ -1,0 +1,18 @@
+@use '../../styles/' as *;
+
+.wrapper {
+  @include flex($direction: column);
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  margin-bottom: 8px;
+}
+
+.error {
+  @include font($col: color(placeholder), $fz: 12px, $lh: 16px);
+  margin-top: 8px;
+}

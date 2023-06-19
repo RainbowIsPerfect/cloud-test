@@ -1,0 +1,25 @@
+@use '../../../styles/' as *;
+
+.input {
+  @include font($fz: 14px, $lh: 20px, $col: color(text));
+  @include size($h: 44px, $maxw: 300px);
+  @include border(1px, solid, color(border), $r: 4px);
+  padding: 12px;
+  outline-offset: -2px;
+  outline: 2px solid transparent;
+  transition: all 0.15s ease-in-out;
+  &::placeholder {
+    color: color(placeholder);
+  }
+  &:focus {
+    outline-color: color(accent);
+    background-color: color(disabled);
+  }
+  &:hover {
+    background-color: color(disabled);
+  }
+  &:disabled {
+    color: color(placeholder);
+    background-color: color(disabled);
+  }
+}

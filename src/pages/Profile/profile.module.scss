@@ -1,0 +1,14 @@
+@use '../../styles/' as *;
+
+.profile {
+  max-width: 900px;
+  width: 100%;
+  min-height: 704px;
+  padding: 25px 24px;
+  background-color: #fff;
+  border-radius: 12px 12px 0px 0px;
+  &__divider {
+    margin-bottom: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}

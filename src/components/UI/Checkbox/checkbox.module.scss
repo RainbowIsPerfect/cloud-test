@@ -1,0 +1,13 @@
+@use '../../../styles/' as *;
+
+.checkbox {
+  @include flex($align: center);
+  height: 20px;
+  &__input {
+    @include size($w: 16px, $h: 16px);
+    margin: 0 8px 0 2px;
+  }
+  &__label {
+    @include font($fz: 14px, $lh: 20px);
+  }
+}

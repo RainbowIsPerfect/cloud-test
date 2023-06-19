@@ -1,0 +1,63 @@
+@use '../../../styles/' as *;
+
+.button {
+  padding: 12px 16px;
+  height: 44px;
+  @include border(1.5px, solid, transparent, $r: 4px);
+  @include font($lh: 20px, $fz: 14px);
+  outline: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.button_solid {
+  @extend .button;
+  color: color(main-bg);
+  background-color: color(accent);
+  &:focus-visible {
+    background-color: color('accent-hover');
+  }
+  &:hover {
+    background-color: color('accent-hover');
+  }
+  &:active {
+    background-color: color(accent-active);
+  }
+  &:disabled {
+    background-color: color('accent-disabled');
+    cursor: default;
+  }
+}
+
+.button_outlined {
+  @extend .button;
+  color: color('accent');
+  background-color: transparent;
+  border-color: color('accent');
+  &:focus-visible {
+    background-color: color(accent-hover-light);
+  }
+  &:hover {
+    background-color: color(accent-hover-light);
+  }
+  &:active {
+    background-color: color(accent-active-light);
+  }
+  &:disabled {
+    border-color: color('accent-disabled');
+    background-color: transparent;
+    color: color('accent-disabled');
+    cursor: default;
+  }
+}
+
+.button_icon {
+  @extend .button;
+  height: 100%;
+  padding: 5px 15px;
+  background-color: transparent;
+  & svg {
+    width: 15px;
+    height: 15.2px;
+  }
+}

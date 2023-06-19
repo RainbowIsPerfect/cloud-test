@@ -1,0 +1,5 @@
+@use '../../../styles/' as *;
+
+.error {
+  @include font($col: color(placeholder), $fz: 12px, $lh: 16px);
+}

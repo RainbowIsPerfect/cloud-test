@@ -1,0 +1,26 @@
+@use '../../../styles/' as *;
+
+.textarea {
+  @include size($minh: 84px, $maxh: 200px, $w: 100%);
+  @include border(1px, solid, color(border), $r: 4px);
+  @include font($col: color(text), $fz: 14px, $lh: 20px);
+  padding: 12px;
+  resize: vertical;
+  outline-offset: -2px;
+  outline: 2px solid transparent;
+  transition: outline-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  &::placeholder {
+    color: color(placeholder);
+  }
+  &:focus {
+    outline-color: color(accent);
+    background-color: color(disabled);
+  }
+  &:hover {
+    background-color: color(disabled);
+  }
+  &:disabled {
+    color: color(placeholder);
+    background-color: color(disabled);
+  }
+}

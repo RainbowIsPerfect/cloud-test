@@ -1,0 +1,54 @@
+@use '../../styles/' as *;
+
+.profile {
+  @include flex($align: center);
+  margin-bottom: 24px;
+  &__avatar {
+    @include flex($align: center, $justify: center);
+    @include size($w: 80px, $h: 80px);
+    margin-right: 24px;
+    background-color: color(avatar-bg);
+    border-radius: 50%;
+  }
+  &__initials {
+    @include font($fz: 40px, $lh: 52px, $fw: 600, $col: color(avatar-text), $align: center);
+  }
+  &__name {
+    @include font($fz: 20px, $lh: 26px, $fw: 600, $col: color(text));
+    margin-bottom: 8px;
+  }
+  &__about {
+    @include flex($direction: column);
+  }
+  &__link-list {
+    @include flex;
+    list-style-type: none;
+  }
+  &__list-item {
+    margin-right: 17.6px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    @include flex($align: center);
+    @include font($col: color(accent), $fz: 12px, $lh: 16px);
+  }
+  &__link-text {
+    margin-left: 5.6px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile {
+    // align-items: flex-start;
+    flex-direction: column;
+    &__avatar {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+    &__name {
+      text-align: center;
+    }
+  }
+}
