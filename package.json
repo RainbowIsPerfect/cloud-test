@@ -1,5 +1,4 @@
 {
-  "homepage": "http://RainbowIsPerfect.github.io/cloud-test",
   "name": "cloud-test",
   "private": true,
   "version": "0.0.0",
@@ -43,3 +42,4 @@
     "vite": "^4.3.9"
   }
 }
+
