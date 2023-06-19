@@ -24,7 +24,7 @@ export const Stepper = ({
       connectorStateColors={true}
       className={`${s.stepper} ${className}`}
       activeStep={activeStep}>
-      {[...new Array(steps)].map((value, i) => {
+      {[...new Array(steps)].map((_, i) => {
         return (
           <Step
             key={i}
