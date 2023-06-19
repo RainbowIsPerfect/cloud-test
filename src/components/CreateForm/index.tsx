@@ -82,7 +82,7 @@ type SchemaType = typeof finalSchema;
 export const CreateForm = () => {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
-  const [sendData, { isSuccess, data, isError }] = useSendDataMutation();
+  const [sendData, { data }] = useSendDataMutation();
   const navigate = useNavigate();
   const formState = useAppSelector((state) => state.form);
   const dispatch = useAppDispatch();
@@ -97,13 +97,13 @@ export const CreateForm = () => {
     ],
     schema: finalSchema,
     mode: 'onTouched',
-    // defaultValues: {
-    //   ...formState,
-    //   advantages:
-    //     formState.advantages.length === 0
-    //       ? [{ advantage: '' }, { advantage: '' }, { advantage: '' }]
-    //       : formState.advantages,
-    // },
+    defaultValues: {
+      ...formState,
+      advantages:
+        formState.advantages.length === 0
+          ? [{ advantage: '' }, { advantage: '' }, { advantage: '' }]
+          : formState.advantages,
+    },
   });
   const { handleSubmit } = methods;
 
